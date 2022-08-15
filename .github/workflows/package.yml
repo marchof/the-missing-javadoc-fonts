@@ -1,0 +1,27 @@
+name: Package JavaDoc Fonts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  fonts:
+    name: Package Fonts
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Install font tool
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y woff2
+
+    - uses: actions/checkout@v3
+
+    - name: Generate font package
+      run: bash generate.sh
+        
+    - uses: actions/upload-artifact@v3
+      with:
+        name: javadoc-fonts
+        path: "target/"
