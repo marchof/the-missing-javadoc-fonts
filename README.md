@@ -2,6 +2,8 @@
 
 Since Java 8 api documentations generated with JDK's `javadoc` tool uses the [DejaVu](https://dejavu-fonts.github.io/) font family. Unfortunately this font is by default only available on some Linux distributions. Make your JavaDoc look like the original on all systems and browsers by adding the font resources from this package.
 
+Since Java 22 the font will is added by the `javadoc` command, see [JDK-8324774](https://bugs.openjdk.org/browse/JDK-8324774).
+
 ## Installation
 
 Download the latest [font package](https://github.com/marchof/the-missing-javadoc-font/releases/download/v1.0.0/javadoc-fonts.zip) and unzip it to the root folder of your JavaDoc. The font package adds the  folder `resources/fonts` with a `css` file and the `woff2` font files.
